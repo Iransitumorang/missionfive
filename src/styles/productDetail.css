@@ -1,0 +1,428 @@
+/* Hero Section */
+.hero-section {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.rating {
+  margin-top: 20px;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+.star.empty {
+  color: #ccc;
+}
+
+.reviews {
+  color: #999;
+  margin-left: 10px;
+}
+
+.main-content {
+  padding: 40px 0;
+}
+
+/* Description Section */
+.description-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Tutors Section */
+.tutors-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tutor-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tutor-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tutor-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.tutor-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.tutor-details .role {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.tutor-details .experience {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Curriculum Section */
+.curriculum-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.curriculum-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.curriculum-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.curriculum-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #28a745;
+}
+
+.lesson-item {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.lesson-info {
+  display: flex;
+  align-items: center;
+}
+
+.video-icon {
+  margin-right: 10px;
+  color: #666;
+}
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Course Info Card */
+.course-info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.course-info-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.promo {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.btn-beli {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-beli:hover {
+  background-color: #218838;
+}
+
+.course-stats {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.course-stats h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.stat-item i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.language-info {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.language-info h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.language i {
+  margin-right: 8px;
+}
+
+/* Related Courses */
+.related-courses {
+  margin-top: 50px;
+}
+
+.related-courses h2 {
+  margin-bottom: 30px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.course-content p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.instructor-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.instructor-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.course-footer .rating {
+  margin-top: 0;
+}
+
+.course-footer .price {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Price Card */
+.price-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price-card .price h2 {
+  font-size: 2rem;
+  color: #198754;
+  margin-bottom: 1.5rem;
+}
+
+/* Content Section */
+.content-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Accordion Styles */
+.accordion-item {
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-button {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e8f5e9;
+  color: #198754;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(25, 135, 84, 0.1);
+}
+
+.course-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-item i {
+  color: #198754;
+  font-size: 1.25rem;
+}
+
+/* Related Courses */
+.related-course-card {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.related-course-card:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.related-course-card img {
+  border-radius: 8px;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.related-course-card h6 {
+  margin: 0.75rem 0;
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .price-card {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .content-section,
+  .related-courses {
+    padding: 1.5rem;
+  }
+} 
