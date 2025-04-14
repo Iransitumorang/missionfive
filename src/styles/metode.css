@@ -3,7 +3,6 @@
   min-height: 100vh;
 }
 
-/* Progress Bar */
 .payment-progress {
   display: flex;
   justify-content: center;
@@ -53,7 +52,6 @@
   margin-bottom: 30px;
 }
 
-/* Payment Methods */
 .payment-methods {
   background: white;
   border-radius: 8px;
@@ -121,18 +119,18 @@
   padding: 12px;
   border: 1px solid #e9ecef;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   cursor: pointer;
-  transition: border-color 0.3s;
+  transition: all 0.2s;
 }
 
 .bank-option:hover {
-  border-color: #28a745;
+  border-color: #37B04C;
 }
 
 .bank-option.selected {
-  border-color: #28a745;
-  background-color: #f8f9fa;
+  border-color: #37B04C;
+  background-color: #F7FFF9;
 }
 
 .bank-info {
@@ -142,20 +140,32 @@
 }
 
 .bank-info img {
-  width: 40px;
-  height: 40px;
+  height: 24px;
+  width: auto;
+  max-width: 100px;
   object-fit: contain;
 }
 
+.bank-info span {
+  font-size: 14px;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
 .bank-check {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 2px solid #28a745;
+  border: 2px solid #37B04C;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #28a745;
+  color: #37B04C;
+}
+
+.checkmark {
+  font-size: 14px;
+  line-height: 1;
 }
 
 .card-logos {
@@ -181,7 +191,6 @@
   font-size: 14px;
 }
 
-/* Order Summary */
 .order-summary {
   background: white;
   border-radius: 12px;
@@ -365,7 +374,6 @@
   cursor: not-allowed;
 }
 
-/* Ringkasan Pesanan Section */
 .order-summary-section {
   background: white;
   border-radius: 12px;
@@ -517,7 +525,6 @@
   border-radius: 8px;
 }
 
-/* Tambahkan padding bottom pada container untuk mengakomodasi fixed button */
 .container {
   padding-bottom: 80px;
 } 

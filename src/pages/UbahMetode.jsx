@@ -105,18 +105,18 @@ const UbahMetode = () => {
           </div>
 
           <div className="col-md-4">
-            <div className="course-preview">
+            <div className="order-summary">
               <img 
-                src="/images/course-preview.jpg" 
+                src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" 
                 alt="Course Preview" 
-                className="preview-image"
+                className="course-image"
               />
-              <h3>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager.</h3>
+              <h3>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager</h3>
               
               <div className="price-info">
-                <span className="current-price">Rp 250K</span>
-                <span className="original-price">Rp 500K</span>
-                <span className="discount-badge">Hemat 50%</span>
+                <div className="current-price">Rp 250.000</div>
+                <div className="original-price">Rp 500.000</div>
+                <div className="discount-badge">Diskon 50%</div>
               </div>
 
               <div className="course-features">

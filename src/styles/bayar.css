@@ -28,7 +28,6 @@
   color: #FFA500;
 }
 
-/* Progress Bar */
 .payment-progress {
   display: flex;
   align-items: center;
@@ -98,7 +97,6 @@
   background-color: #37B04C;
 }
 
-/* Timer Section */
 .timer-section {
   background-color: #FFF3CD;
   color: #212121;
@@ -129,7 +127,6 @@
   font-size: 14px;
 }
 
-/* Payment Detail */
 .payment-detail {
   background: white;
   border-radius: 12px;
@@ -144,59 +141,74 @@
 }
 
 .payment-method-info {
+  background: #fff;
   border: 1px solid #E4E4E4;
   border-radius: 8px;
-  padding: 16px;
+  padding: 24px;
   margin-bottom: 24px;
 }
 
 .bca-info {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .bank-logo {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  height: 40px !important;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.payment-text {
+  width: 100%;
+  text-align: center;
 }
 
 .payment-text p {
-  color: #212121;
-  font-size: 16px;
+  color: #1A1A1A;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 
 .va-number {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
 }
 
-.va-number span {
+.va-number span:first-child {
   font-size: 16px;
-  font-weight: 600;
-  color: #212121;
+  font-weight: 500;
+  color: #1A1A1A;
+  letter-spacing: 0.5px;
 }
 
 .btn-salin {
-  padding: 4px 12px;
-  background-color: transparent;
-  color: #FF4B4B;
-  border: 1px solid #FF4B4B;
-  border-radius: 4px;
+  color: #FF5C5C;
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
 }
 
 .btn-salin:hover {
-  background-color: #FF4B4B;
-  color: white;
+  color: #ff3c3c;
 }
 
-/* Payment Instructions */
+.btn-salin.copied {
+  color: #37B04C;
+}
+
+.btn-salin.copied:hover {
+  color: #FF5C5C;
+}
+
 .payment-instructions {
   margin-top: 24px;
 }
@@ -238,7 +250,6 @@
   transform: rotate(-135deg);
 }
 
-/* Order Summary - Reuse styles from metode.css */
 .order-summary {
   background: white;
   border-radius: 12px;
@@ -291,7 +302,6 @@
   font-weight: 500;
 }
 
-/* Order Summary Section */
 .order-summary-section {
   margin-top: 24px;
   background: white;
@@ -383,7 +393,6 @@
   background-color: #2f9440;
 }
 
-/* Course Preview */
 .course-preview {
   background: white;
   border-radius: 12px;
@@ -534,7 +543,6 @@
   -webkit-transform: rotate(-135deg);
 }
 
-/* Button khusus untuk halaman UbahMetode */
 .ubah-metode-page .btn-bayar-sekarang {
   width: 100%;
   margin-top: 24px;
@@ -553,48 +561,42 @@
   background-color: #2f9440;
 }
 
-/* Success Payment Page */
 .success-payment-container {
-  max-width: 600px;
+  max-width: 480px;
   margin: 40px auto;
   background: white;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 40px;
   text-align: center;
-}
-
-.success-image {
-  width: 240px;
-  height: 240px;
-  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .success-title {
   font-size: 24px;
   font-weight: 600;
-  color: #212121;
-  margin-bottom: 16px;
+  color: #1A1A1A;
+  margin-bottom: 12px;
 }
 
 .success-message {
-  font-size: 16px;
+  font-size: 14px;
   color: #757575;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   line-height: 1.5;
 }
 
 .btn-lihat-detail {
-  background-color: #37B04C;
+  background: #37B04C;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 14px 32px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .btn-lihat-detail:hover {
-  background-color: #2f9440;
+  background: #2f9440;
 } 

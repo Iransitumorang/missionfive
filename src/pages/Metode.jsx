@@ -27,17 +27,49 @@ const Metode = () => {
   };
 
   const banks = [
-    { id: 'bca', name: 'Bank BCA', logo: '/path/to/bca.png' },
-    { id: 'bni', name: 'Bank BNI', logo: '/path/to/bni.png' },
-    { id: 'bri', name: 'Bank BRI', logo: '/path/to/bri.png' },
-    { id: 'mandiri', name: 'Bank Mandiri', logo: '/path/to/mandiri.png' }
+    { 
+      id: 'bca', 
+      name: 'Bank BCA', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg'
+    },
+    { 
+      id: 'bni', 
+      name: 'Bank BNI', 
+      logo: 'https://upload.wikimedia.org/wikipedia/id/5/55/BNI_logo.svg'
+    },
+    { 
+      id: 'bri', 
+      name: 'Bank BRI', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/68/BANK_BRI_logo.svg'
+    },
+    { 
+      id: 'mandiri', 
+      name: 'Bank Mandiri', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg'
+    }
   ];
 
   const ewallets = [
-    { id: 'dana', name: 'Dana', logo: '/path/to/dana.png' },
-    { id: 'ovo', name: 'OVO', logo: '/path/to/ovo.png' },
-    { id: 'linkaja', name: 'LinkAja', logo: '/path/to/linkaja.png' },
-    { id: 'shopeepay', name: 'ShopeePay', logo: '/path/to/shopeepay.png' }
+    { 
+      id: 'dana', 
+      name: 'Dana', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg'
+    },
+    { 
+      id: 'ovo', 
+      name: 'OVO', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg'
+    },
+    { 
+      id: 'linkaja', 
+      name: 'LinkAja', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/85/LinkAja.svg'
+    },
+    { 
+      id: 'shopeepay', 
+      name: 'ShopeePay', 
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shopee.svg/2560px-Shopee.svg.png'
+    }
   ];
 
   const handleMethodSelect = (method) => {
@@ -54,6 +86,28 @@ const Metode = () => {
       setIsTransferOpen(false);
       setIsEWalletOpen(false);
     }
+  };
+
+  const handleBankSelect = (bank) => {
+    setSelectedBank(bank.id);
+    // Simpan data bank yang dipilih
+    localStorage.setItem('selectedPayment', JSON.stringify({
+      type: 'bank',
+      id: bank.id,
+      name: bank.name,
+      logo: bank.logo
+    }));
+  };
+
+  const handleEWalletSelect = (wallet) => {
+    setSelectedBank(wallet.id);
+    // Simpan data e-wallet yang dipilih
+    localStorage.setItem('selectedPayment', JSON.stringify({
+      type: 'ewallet',
+      id: wallet.id,
+      name: wallet.name,
+      logo: wallet.logo
+    }));
   };
 
   return (
@@ -103,7 +157,7 @@ const Metode = () => {
                       <div 
                         key={bank.id}
                         className={`bank-option ${selectedBank === bank.id ? 'selected' : ''}`}
-                        onClick={() => setSelectedBank(bank.id)}
+                        onClick={() => handleBankSelect(bank)}
                       >
                         <div className="bank-info">
                           <img src={bank.logo} alt={bank.name} />
@@ -135,7 +189,7 @@ const Metode = () => {
                       <div 
                         key={wallet.id}
                         className={`bank-option ${selectedBank === wallet.id ? 'selected' : ''}`}
-                        onClick={() => setSelectedBank(wallet.id)}
+                        onClick={() => handleEWalletSelect(wallet)}
                       >
                         <div className="bank-info">
                           <img src={wallet.logo} alt={wallet.name} />
@@ -164,9 +218,21 @@ const Metode = () => {
                 {isCardOpen && (
                   <div className="method-content">
                     <div className="card-logos">
-                      <img src="/images/mastercard.png" alt="Mastercard" />
-                      <img src="/images/visa.png" alt="Visa" />
-                      <img src="/images/jcb.png" alt="JCB" />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" 
+                        alt="Mastercard" 
+                        style={{ height: '30px', marginRight: '15px' }}
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" 
+                        alt="Visa"
+                        style={{ height: '30px', marginRight: '15px' }}
+                      />
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg" 
+                        alt="JCB"
+                        style={{ height: '30px' }}
+                      />
                     </div>
                   </div>
                 )}
@@ -203,7 +269,7 @@ const Metode = () => {
           <div className="col-md-4">
             <div className="order-summary">
               <img 
-                src="/path/to/course-image.jpg" 
+                src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" 
                 alt={courseData.title} 
                 className="course-image"
               />

@@ -7,8 +7,16 @@ const Bayar = () => {
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({ minutes: 50, seconds: 55 });
   const [activeInstruction, setActiveInstruction] = useState(null);
+  const [selectedPayment, setSelectedPayment] = useState(null);
+  const [copySuccess, setCopySuccess] = useState(false);
 
   useEffect(() => {
+    // Ambil data pembayaran yang dipilih
+    const paymentData = localStorage.getItem('selectedPayment');
+    if (paymentData) {
+      setSelectedPayment(JSON.parse(paymentData));
+    }
+
     const timer = setInterval(() => {
       setTimeLeft(prev => {
         if (prev.seconds === 0) {
@@ -29,6 +37,83 @@ const Bayar = () => {
 
   const toggleInstruction = (index) => {
     setActiveInstruction(activeInstruction === index ? null : index);
+  };
+
+  // Generate nomor VA berdasarkan bank
+  const getVANumber = (bankId) => {
+    const numbers = {
+      'bca': '11739 081234567890',
+      'bni': '8808 081234567890',
+      'bri': '88810 081234567890',
+      'mandiri': '89508 081234567890'
+    };
+    return numbers[bankId] || '11739 081234567890';
+  };
+
+  const handleCopy = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopySuccess(true);
+      // Tidak perlu setTimeout karena akan kembali saat hover
+    });
+  };
+
+  // Render metode pembayaran yang sesuai
+  const renderPaymentMethod = () => {
+    if (!selectedPayment) return null;
+
+    if (selectedPayment.type === 'bank') {
+      const vaNumber = getVANumber(selectedPayment.id);
+      return (
+        <div className="payment-method-info">
+          <div className="bca-info">
+            <img 
+              src={selectedPayment.logo}
+              alt={selectedPayment.name}
+              className="bank-logo"
+            />
+            <div className="payment-text">
+              <p>Bayar Melalui Virtual Account {selectedPayment.name}</p>
+              <div className="va-number">
+                <span>{vaNumber}</span>
+                <span 
+                  className={`btn-salin ${copySuccess ? 'copied' : ''}`}
+                  onClick={() => handleCopy(vaNumber)}
+                  onMouseEnter={() => setCopySuccess(false)}
+                >
+                  {copySuccess ? 'Tersalin!' : 'Salin'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (selectedPayment.type === 'ewallet') {
+      const phoneNumber = '081234567890';
+      return (
+        <div className="payment-method-info">
+          <div className="bca-info">
+            <img 
+              src={selectedPayment.logo}
+              alt={selectedPayment.name}
+              className="bank-logo"
+            />
+            <div className="payment-text">
+              <p>Bayar Melalui {selectedPayment.name}</p>
+              <div className="va-number">
+                <span>{phoneNumber}</span>
+                <span 
+                  className={`btn-salin ${copySuccess ? 'copied' : ''}`}
+                  onClick={() => handleCopy(phoneNumber)}
+                  onMouseEnter={() => setCopySuccess(false)}
+                >
+                  {copySuccess ? 'Tersalin!' : 'Salin'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
   };
 
   return (
@@ -70,18 +155,7 @@ const Bayar = () => {
             <div className="payment-detail">
               <h2>Metode Pembayaran</h2>
               
-              <div className="payment-method-info">
-                <div className="bca-info">
-                  <img src="/images/bca.png" alt="BCA" className="bank-logo" />
-                  <div className="payment-text">
-                    <p>Bayar Melalui Virtual Account BCA</p>
-                    <div className="va-number">
-                      <span>11739 081234567890</span>
-                      <button className="btn-salin">Salin</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {renderPaymentMethod()}
 
               {/* Ringkasan Pesanan */}
               <div className="order-summary-section">
@@ -173,18 +247,18 @@ const Bayar = () => {
           </div>
 
           <div className="col-md-4">
-            <div className="course-preview">
+            <div className="order-summary">
               <img 
-                src="/images/course-preview.jpg" 
+                src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2831&q=80" 
                 alt="Course Preview" 
-                className="preview-image"
+                className="course-image"
               />
-              <h3>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager.</h3>
+              <h3>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager</h3>
               
               <div className="price-info">
-                <span className="current-price">Rp 250K</span>
-                <span className="original-price">Rp 500K</span>
-                <span className="discount-badge">Hemat 50%</span>
+                <div className="current-price">Rp 250.000</div>
+                <div className="original-price">Rp 500.000</div>
+                <div className="discount-badge">Diskon 50%</div>
               </div>
 
               <div className="course-features">

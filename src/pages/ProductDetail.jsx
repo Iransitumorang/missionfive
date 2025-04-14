@@ -75,7 +75,11 @@ const ProductDetail = () => {
         id: 1,
         title: 'Big 4 Auditor Financial Analyst',
         description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
-        instructor: 'Jenna Ortega',
+        instructor: {
+          name: 'Jenna Ortega',
+          role: 'Senior Accountant di Gojek',
+          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60'
+        },
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
@@ -85,7 +89,11 @@ const ProductDetail = () => {
         id: 2,
         title: 'Big 4 Auditor Financial Analyst',
         description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
-        instructor: 'Jenna Ortega',
+        instructor: {
+          name: 'Jenna Ortega',
+          role: 'Senior Accountant di Gojek',
+          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60'
+        },
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
@@ -95,7 +103,11 @@ const ProductDetail = () => {
         id: 3,
         title: 'Big 4 Auditor Financial Analyst',
         description: 'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...',
-        instructor: 'Jenna Ortega',
+        instructor: {
+          name: 'Jenna Ortega',
+          role: 'Senior Accountant di Gojek',
+          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60'
+        },
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
@@ -145,13 +157,11 @@ const ProductDetail = () => {
       <div className="container main-content">
         <div className="row">
           <div className="col-md-8">
-            {/* Deskripsi */}
             <section className="description-section">
               <h2>Deskripsi</h2>
               <p>{courseData.description}</p>
             </section>
 
-            {/* Belajar bersama Tutor Professional */}
             <section className="tutors-section">
               <h2>Belajar bersama Tutor Professional</h2>
               <div className="tutors-grid">
@@ -170,7 +180,6 @@ const ProductDetail = () => {
               </div>
             </section>
 
-            {/* Kamu akan Mempelajari */}
             <section className="curriculum-section">
               <h2>Kamu akan Mempelajari</h2>
               {courseData.curriculum.map((section, index) => (
@@ -194,7 +203,6 @@ const ProductDetail = () => {
           </div>
 
           <div className="col-md-4">
-            {/* Course Info Card */}
             <div className="course-info-card">
               <h2>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager</h2>
               <div className="price">Rp {courseData.price.toLocaleString()}</div>
@@ -239,7 +247,6 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        {/* Related Courses */}
         <section className="related-courses">
           <h2>Video Pembelajaran Terkait Lainnya</h2>
           <div className="row">
@@ -252,10 +259,13 @@ const ProductDetail = () => {
                     <p>{course.description}</p>
                     <div className="instructor-info">
                       <img 
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" 
-                        alt={course.instructor} 
+                        src={course.instructor.image} 
+                        alt={course.instructor.name} 
                       />
-                      <span>{course.instructor}</span>
+                      <div className="instructor-details">
+                        <span className="instructor-name">{course.instructor.name}</span>
+                        <span className="instructor-role">{course.instructor.role}</span>
+                      </div>
                     </div>
                     <div className="course-footer">
                       <div className="rating">

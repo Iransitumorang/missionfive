@@ -32,9 +32,10 @@ const Selesai = () => {
       <div className="container py-4">
         <div className="success-payment-container">
           <img 
-            src="/images/payment-success.png" 
+            src="https://cdn-icons-png.flaticon.com/512/7518/7518748.png" 
             alt="Pembayaran Berhasil" 
             className="success-image"
+            style={{ width: '120px', height: '120px', marginBottom: '24px' }}
           />
           <h1 className="success-title">Pembayaran Berhasil!</h1>
           <p className="success-message">

@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,6 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Header Styles */
 header {
     background: white;
     padding: 1rem 2rem;
@@ -53,7 +52,6 @@ header {
     object-fit: cover;
 }
 
-/* Hero Section */
 .hero {
     background-color: #f8f9fa;
     color: #333;
@@ -87,7 +85,6 @@ header {
     font-size: 1rem;
 }
 
-/* Content Section */
 .content {
     padding: 0 2rem;
     max-width: 1200px;
@@ -132,7 +129,6 @@ header {
     margin-top: 20px;
 }
 
-/* Video Card */
 .video-card {
     border: 1px solid #eee;
     border-radius: 8px;
@@ -212,7 +208,6 @@ header {
     font-size: 14px;
 }
 
-/* Newsletter */
 .newsletter {
     background-color: #f8f9fa;
     color: #333;
@@ -267,7 +262,6 @@ header {
     font-weight: 500;
 }
 
-/* Footer */
 footer {
     padding: 3rem 2rem;
     background: white;
@@ -356,7 +350,6 @@ footer {
     text-decoration: none;
 }
 
-/* Login Page Styles */
 .login-container {
     background: white;
     padding: 2rem;
@@ -444,7 +437,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Header for Auth Pages */
 .header {
     width: 100%;
     border-top: 1px solid #e0e0e0;
@@ -466,7 +458,6 @@ footer {
     transform: translateY(4px);
 }
 
-/* Register Page Styles */
 .register-container {
     background: white;
     padding: 2rem;
@@ -587,7 +578,6 @@ footer {
     color: #666;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
     .video-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -723,7 +713,6 @@ footer {
         margin-bottom: 0;
     }
 
-    /* Mobile Auth Pages */
     body {
         background-color: white;
         margin: 0;
@@ -843,7 +832,6 @@ footer {
     }
 }
 
-/* Tambahkan di bagian Login Page Styles */
 .btn-masuk:hover {
     background: #45a049;
     transform: translateY(-2px);
@@ -860,12 +848,10 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Transisi halus */
 .btn-masuk, .btn-daftar, .google-login {
     transition: all 0.3s ease;
 }
 
-/* Responsive Styles for Register Page */
 @media (max-width: 768px) {
     body {
         background-color: white;

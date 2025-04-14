@@ -226,7 +226,6 @@ const Products = () => {
       <Header />
       <div className="container mt-4 mb-5">
         <div className="row">
-          {/* Sidebar Filter */}
           <div className="col-lg-3">
             <div className="filter-container">
               <div className="d-flex justify-content-between align-items-center mb-3">
@@ -234,7 +233,6 @@ const Products = () => {
                 <button className="btn btn-link text-danger p-0 text-decoration-none">Reset</button>
               </div>
 
-              {/* Bidang Studi */}
               <div className="filter-section">
                 <div className="filter-header">
                   <span className="filter-title">
@@ -271,7 +269,6 @@ const Products = () => {
                 </div>
               </div>
 
-              {/* Harga */}
               <div className="filter-section">
                 <div className="filter-header">
                   <span className="filter-title">
@@ -308,7 +305,6 @@ const Products = () => {
                 </div>
               </div>
 
-              {/* Durasi */}
               <div className="filter-section">
                 <div className="filter-header">
                   <span className="filter-title">
@@ -341,7 +337,6 @@ const Products = () => {
             </div>
           </div>
 
-          {/* Main Content */}
           <div className="col-lg-9">
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h4>Koleksi Video Pembelajaran Unggulan</h4>
