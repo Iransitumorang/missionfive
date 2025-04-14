@@ -58,26 +58,29 @@ const Metode = () => {
 
   return (
     <div className="metode-page">
-      <Header />
-      
-      <div className="container py-4">
-        <div className="payment-progress">
-          <div className="progress-item active">
-            <div className="progress-circle">1</div>
-            <span>Pilih Metode</span>
-          </div>
-          <div className="progress-line"></div>
-          <div className="progress-item">
-            <div className="progress-circle">2</div>
-            <span>Bayar</span>
-          </div>
-          <div className="progress-line"></div>
-          <div className="progress-item">
-            <div className="progress-circle">3</div>
-            <span>Selesai</span>
+      <div className="header">
+        <div className="header-content">
+          <div className="logo">videobelajar</div>
+          <div className="payment-progress">
+            <div className="progress-item active">
+              <div className="progress-circle">1</div>
+              <span>Pilih Metode</span>
+            </div>
+            <div className="progress-line"></div>
+            <div className="progress-item">
+              <div className="progress-circle">2</div>
+              <span>Bayar</span>
+            </div>
+            <div className="progress-line"></div>
+            <div className="progress-item">
+              <div className="progress-circle">3</div>
+              <span>Selesai</span>
+            </div>
           </div>
         </div>
-
+      </div>
+      
+      <div className="container py-4">
         <div className="row mt-4">
           <div className="col-md-8">
             <div className="payment-methods">

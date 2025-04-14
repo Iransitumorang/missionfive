@@ -1,123 +1,171 @@
 .bayar-page {
-  background-color: #f8f9fa;
+  background-color: #FDF6ED;
   min-height: 100vh;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #E4E4E4;
+  padding: 16px 0;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212121;
+}
+
+.logo span:first-child {
+  color: #FFA500;
 }
 
 /* Progress Bar */
 .payment-progress {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  padding: 0 24px;
 }
 
 .progress-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  gap: 12px;
 }
 
 .progress-circle {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: #e9ecef;
+  background-color: #E4E4E4;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6c757d;
-  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .progress-item.active .progress-circle {
-  background-color: #28a745;
-  color: white;
+  background-color: #37B04C;
 }
 
 .progress-item.completed .progress-circle {
-  background-color: #28a745;
+  background-color: #37B04C;
+}
+
+.progress-item.completed .progress-circle::after {
+  content: "✓";
   color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.progress-item span {
+  font-size: 16px;
+  color: #9E9E9E;
+  white-space: nowrap;
+}
+
+.progress-item.active span {
+  color: #212121;
+  font-weight: 500;
+}
+
+.progress-item.completed span {
+  color: #212121;
+  font-weight: 500;
 }
 
 .progress-line {
-  width: 100px;
+  width: 160px;
   height: 2px;
-  background-color: #e9ecef;
-  margin: 0 20px;
-  margin-bottom: 30px;
+  background-color: #E4E4E4;
+  margin: 0 8px;
 }
 
 .progress-line.completed {
-  background-color: #28a745;
+  background-color: #37B04C;
 }
 
-/* Timer */
-.timer-container {
+.progress-item.completed + .progress-line {
+  background-color: #37B04C;
+}
+
+/* Timer Section */
+.timer-section {
+  background-color: #FFF3CD;
+  color: #212121;
   text-align: center;
-  margin: 30px 0;
-}
-
-.timer-container p {
-  margin-bottom: 10px;
-  color: #495057;
-}
-
-.timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .time-box {
-  background-color: #dc3545;
+  display: inline-block;
+  background-color: #FF4B4B;
   color: white;
-  padding: 8px 12px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
   border-radius: 4px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  margin: 0 1px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .time-separator {
-  color: #dc3545;
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: #FF4B4B;
+  font-weight: 600;
+  margin: 0 4px;
+  font-size: 14px;
 }
 
 /* Payment Detail */
 .payment-detail {
   background: white;
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 24px;
 }
 
 .payment-detail h2 {
-  font-size: 1.2rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
   margin-bottom: 24px;
 }
 
-.virtual-account {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border: 1px solid #e9ecef;
+.payment-method-info {
+  border: 1px solid #E4E4E4;
   border-radius: 8px;
-  margin-bottom: 30px;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
-.bank-logo img {
-  width: 60px;
-  height: 60px;
+.bca-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bank-logo {
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
-.payment-info p {
-  margin-bottom: 10px;
-  color: #495057;
+.payment-text p {
+  color: #212121;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .va-number {
@@ -127,24 +175,30 @@
 }
 
 .va-number span {
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
 }
 
 .btn-salin {
-  padding: 6px 12px;
-  background-color: #28a745;
-  color: white;
-  border: none;
+  padding: 4px 12px;
+  background-color: transparent;
+  color: #FF4B4B;
+  border: 1px solid #FF4B4B;
   border-radius: 4px;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-salin:hover {
+  background-color: #FF4B4B;
+  color: white;
 }
 
 /* Payment Instructions */
 .payment-instructions {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .payment-instructions h3 {
@@ -153,23 +207,26 @@
 }
 
 .instruction-group {
-  border: 1px solid #e9ecef;
+  border: 1px solid #E4E4E4;
   border-radius: 8px;
   margin-bottom: 12px;
 }
 
-.instruction-group h4 {
-  padding: 15px 20px;
-  margin: 0;
-  font-size: 1rem;
+.instruction-header {
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
+.instruction-header span {
+  font-size: 16px;
+  color: #212121;
+}
+
 .arrow {
-  border: solid #212529;
+  border: solid #212121;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -232,4 +289,312 @@
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+/* Order Summary Section */
+.order-summary-section {
+  margin-top: 24px;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.order-details {
+  margin-bottom: 24px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.order-item span:first-child {
+  flex: 1;
+  padding-right: 24px;
+  color: #757575;
+}
+
+.order-item span:last-child {
+  white-space: nowrap;
+  font-weight: 500;
+  color: #212121;
+}
+
+.total-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.total-label {
+  color: #212121;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #37B04C;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-ganti-metode {
+  flex: 1;
+  padding: 14px;
+  background-color: white;
+  color: #37B04C;
+  border: 1px solid #37B04C;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ganti-metode:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-bayar-sekarang {
+  flex: 1;
+  padding: 14px;
+  background-color: #37B04C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-bayar-sekarang:hover {
+  background-color: #2f9440;
+}
+
+/* Course Preview */
+.course-preview {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.course-preview h3 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212121;
+  margin-bottom: 16px;
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #37B04C;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #757575;
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background-color: #FFF3CD;
+  color: #212121;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.course-features h4 {
+  font-size: 16px;
+  color: #212121;
+  margin-bottom: 16px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-icon {
+  font-size: 16px;
+}
+
+.feature-item span {
+  font-size: 14px;
+  color: #757575;
+}
+
+.language-section {
+  border-top: 1px solid #E4E4E4;
+  padding-top: 20px;
+}
+
+.language-section h4 {
+  font-size: 16px;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-icon {
+  font-size: 16px;
+}
+
+.language-item span {
+  font-size: 14px;
+  color: #757575;
+}
+
+.payment-options {
+  margin-top: 20px;
+}
+
+.payment-option {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #4CAF50;
+}
+
+.payment-option.selected {
+  border-color: #4CAF50;
+  background-color: #f5f5f5;
+}
+
+.option-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.arrow {
+  border: solid #666;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+/* Button khusus untuk halaman UbahMetode */
+.ubah-metode-page .btn-bayar-sekarang {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  background-color: #37B04C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ubah-metode-page .btn-bayar-sekarang:hover {
+  background-color: #2f9440;
+}
+
+/* Success Payment Page */
+.success-payment-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+}
+
+.success-image {
+  width: 240px;
+  height: 240px;
+  margin-bottom: 24px;
+}
+
+.success-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.btn-lihat-detail {
+  background-color: #37B04C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-lihat-detail:hover {
+  background-color: #2f9440;
 } 

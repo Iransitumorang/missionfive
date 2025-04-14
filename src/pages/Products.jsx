@@ -39,7 +39,7 @@ const Products = () => {
         rating: 4.5,
         reviews: 33.5,
         price: 300000,
-        image: 'https://images.unsplash.com/photo-1554224155-1d873cb7d239?ixlib=rb-4.0.3'
+        image: 'https://images.unsplash.com/photo-1554224154-22dec7ec8818?ixlib=rb-4.0.3'
       },
       {
         id: 4,
@@ -69,7 +69,7 @@ const Products = () => {
         rating: 4.5,
         reviews: 33.5,
         price: 300000,
-        image: 'https://images.unsplash.com/photo-1554224154-7e58984b8f28?ixlib=rb-4.0.3'
+        image: 'https://images.unsplash.com/photo-1554224154-22dec7ec8818?ixlib=rb-4.0.3'
       },
     ],
     2: [
