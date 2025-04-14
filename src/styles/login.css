@@ -1,0 +1,195 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border: 1px dashed #D1D5DB;
+  border-radius: 8px;
+}
+
+.logo {
+  display: block;
+  height: 32px;
+  margin: 0 auto 24px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #6B7280;
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.required {
+  color: #EF4444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #37B04C;
+  box-shadow: 0 0 0 1px #37B04C;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgot-password {
+  text-align: right;
+  margin: -16px 0 24px;
+}
+
+.forgot-password a {
+  color: #6B7280;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  color: #37B04C;
+}
+
+.btn-masuk {
+  width: 100%;
+  padding: 9px 12px;
+  background-color: #37B04C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.btn-masuk:hover {
+  background-color: #2f9440;
+}
+
+.btn-daftar {
+  width: 100%;
+  padding: 9px 12px;
+  background-color: #E8F5EA;
+  color: #37B04C;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.btn-daftar:hover {
+  background-color: #d5ecd8;
+}
+
+.divider {
+  text-align: center;
+  margin-bottom: 24px;
+  position: relative;
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #D1D5DB;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 9px 12px;
+  background-color: white;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-google:hover {
+  background-color: #F9FAFB;
+}
+
+.btn-google svg {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+} 

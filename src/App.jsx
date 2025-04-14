@@ -9,6 +9,7 @@ import Metode from './pages/Metode';
 import Bayar from './pages/Bayar';
 import UbahMetode from './pages/UbahMetode';
 import Selesai from './pages/Selesai';
+import Video from './pages/Video';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/bayar" element={<Bayar />} />
         <Route path="/ubah-metode" element={<UbahMetode />} />
         <Route path="/selesai" element={<Selesai />} />
+        <Route path="/video/:id" element={<Video />} />
       </Routes>
     </Router>
   );

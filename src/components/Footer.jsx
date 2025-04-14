@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Logo from '../assets/Logo.png';
 
 const Footer = () => {
   useEffect(() => {
@@ -35,7 +36,11 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-brand">
-            <img src="Logo.png" alt="videobelajar" style={{height: '24px', width: 'auto'}} />
+            <img 
+              src={Logo} 
+              alt="videobelajar" 
+              style={{ height: '24px', width: 'auto' }}
+            />
           </div>
           <p className="footer-description">Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</p>
           <p className="footer-address">Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
