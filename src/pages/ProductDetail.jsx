@@ -20,13 +20,13 @@ const ProductDetail = () => {
         name: 'Gregorius Edrik Lawanto',
         role: 'Senior Talent Acquisition di WingsGroup',
         experience: 'Berkarier di bidang HR selama lebih dari 3 tahun. Saat ini bekerja sebagai Senior Talent Acquisition Specialist di Wings Group Indonesia (Sayap Mas Utama) selama hampir 1 tahun.',
-        image: 'https://example.com/instructor1.jpg'
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=60'
       },
       {
         name: 'Gregorius Edrik Lawanto',
         role: 'Senior Talent Acquisition di WingsGroup',
         experience: 'Berkarier di bidang HR selama lebih dari 3 tahun. Saat ini bekerja sebagai Senior Talent Acquisition Specialist di Wings Group Indonesia (Sayap Mas Utama) selama hampir 1 tahun.',
-        image: 'https://example.com/instructor2.jpg'
+        image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&auto=format&fit=crop&q=60'
       }
     ],
     courseInfo: {
@@ -79,7 +79,7 @@ const ProductDetail = () => {
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
-        image: '/path/to/course1.jpg'
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&auto=format&fit=crop&q=60'
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ const ProductDetail = () => {
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
-        image: '/path/to/course2.jpg'
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60'
       },
       {
         id: 3,
@@ -99,7 +99,7 @@ const ProductDetail = () => {
         rating: 4.6,
         reviews: '(84)',
         price: 300000,
-        image: '/path/to/course3.jpg'
+        image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&auto=format&fit=crop&q=60'
       }
     ]
   };
@@ -120,7 +120,16 @@ const ProductDetail = () => {
     <div className="product-detail">
       <Header />
       
-      {/* Hero Section */}
+      <div className="container">
+        <div className="breadcrumb">
+          <a href="/">Beranda</a>
+          <span className="separator">/</span>
+          <a href="/desain">Desain</a>
+          <span className="separator">/</span>
+          <span>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager</span>
+        </div>
+      </div>
+
       <div className="hero-section">
         <div className="container">
           <h1>{courseData.title}</h1>
@@ -128,7 +137,7 @@ const ProductDetail = () => {
           <p>Kepuasan dijaminkan.</p>
           <div className="rating">
             {renderStars(courseData.rating)}
-            <span className="reviews">{courseData.reviews}</span>
+            <span className="reviews">{courseData.reviews} ulasan</span>
           </div>
         </div>
       </div>
@@ -242,7 +251,10 @@ const ProductDetail = () => {
                     <h3>{course.title}</h3>
                     <p>{course.description}</p>
                     <div className="instructor-info">
-                      <img src="/path/to/instructor.jpg" alt={course.instructor} />
+                      <img 
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" 
+                        alt={course.instructor} 
+                      />
                       <span>{course.instructor}</span>
                     </div>
                     <div className="course-footer">

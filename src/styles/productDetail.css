@@ -2,38 +2,86 @@
 .hero-section {
   background-color: #1a1a1a;
   color: white;
-  padding: 60px 0;
-  margin-bottom: 40px;
+  padding: 32px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop&q=60');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  margin: 2px 16px 32px 16px;
+  overflow: hidden;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 800px;
 }
 
 .hero-section p {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  opacity: 0.9;
+  max-width: 600px;
 }
 
 .rating {
-  margin-top: 20px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .star {
   color: #ffd700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 2px;
 }
 
 .star.empty {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .reviews {
-  color: #999;
-  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 8px;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 16px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.breadcrumb a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.7rem;
 }
 
 .main-content {
@@ -424,5 +472,180 @@
   .content-section,
   .related-courses {
     padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .description-section,
+  .tutors-section,
+  .curriculum-section {
+    margin-bottom: 30px;
+  }
+
+  .tutors-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tutor-card {
+    padding: 15px;
+  }
+
+  .tutor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tutor-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .tutor-details h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .curriculum-item {
+    margin-bottom: 15px;
+  }
+
+  .curriculum-header {
+    padding: 12px;
+  }
+
+  .lesson-item {
+    padding: 10px;
+  }
+
+  .course-info-card {
+    position: static;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .course-info-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .related-courses .row {
+    margin: 0 -10px;
+  }
+
+  .related-courses .col-md-4 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .course-card {
+    margin-bottom: 0;
+  }
+
+  .course-card .course-image {
+    height: 180px;
+  }
+
+  .course-content {
+    padding: 15px;
+  }
+
+  .course-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .instructor-info {
+    margin: 10px 0;
+  }
+
+  .instructor-info img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .course-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .btn-beli {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet Specific Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .tutors-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-info-card {
+    padding: 20px;
+  }
+}
+
+/* Ensure proper spacing in container */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
   }
 } 
