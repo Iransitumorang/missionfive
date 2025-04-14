@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Logo from '../assets/Logo.png';
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import '../styles/footer.css';
 
 const Footer = () => {
   useEffect(() => {
@@ -47,16 +49,6 @@ const Footer = () => {
           <p className="footer-phone">+62-877-7123-1234</p>
         </div>
         <div className="footer-section">
-          <h3>Kategori</h3>
-          <ul>
-            <li><a href="#">Digital & Teknologi</a></li>
-            <li><a href="#">Pemasaran</a></li>
-            <li><a href="#">Manajemen Bisnis</a></li>
-            <li><a href="#">Pengembangan Diri</a></li>
-            <li><a href="#">Desain</a></li>
-          </ul>
-        </div>
-        <div className="footer-section">
           <h3>Perusahaan</h3>
           <ul>
             <li><a href="#">Tentang Kami</a></li>
@@ -64,6 +56,16 @@ const Footer = () => {
             <li><a href="#">Kebijakan Privasi</a></li>
             <li><a href="#">Ketentuan Layanan</a></li>
             <li><a href="#">Bantuan</a></li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3>Perusahaan</h3>
+          <ul>
+            <li><a href="#">Digital & Teknologi</a></li>
+            <li><a href="#">Pemasaran</a></li>
+            <li><a href="#">Manajemen Bisnis</a></li>
+            <li><a href="#">Pengembangan Diri</a></li>
+            <li><a href="#">Desain</a></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -77,10 +79,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <div>©2023 Gerobak Sayur All Rights Reserved.</div>
         <div className="social-links">
-          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+          <a href="#" aria-label="Facebook"><FaFacebookF /></a>
+          <a href="#" aria-label="Instagram"><FaInstagram /></a>
+          <a href="#" aria-label="Twitter"><FaTwitter /></a>
         </div>
       </div>
     </footer>

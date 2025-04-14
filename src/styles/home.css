@@ -266,3 +266,77 @@
 .newsletter-form button:hover {
   background: #D97706;
 } 
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero-text {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .video-thumbnail {
+    height: 180px;
+  }
+
+  .newsletter {
+    padding: 60px 16px;
+  }
+
+  .newsletter h2 {
+    font-size: 24px;
+  }
+
+  .newsletter p {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .newsletter-form input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    padding: 10px 14px;
+    width: 100%;
+    font-size: 14px;
+  }
+}
